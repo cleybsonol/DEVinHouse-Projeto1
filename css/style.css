@@ -1,0 +1,164 @@
+/* CSS Comum */
+
+* {
+  padding: 0;
+  margin: 0;  
+  box-sizing:border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(#4c0b68, #8a2a25, #4c0b68);
+  font-family: sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #73E831;
+}
+
+ul {
+  list-style-type: none;
+  /* get rid of bullet points on side of list taskss */
+}
+
+/* Fim do CSS Comum */
+
+/* container onde ficará o conteúdo principal do site */
+
+.container {
+  min-width: 700px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  border-bottom: 10%;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 3rem;
+}
+
+/* Form das atividades todo-form(tasks) */
+
+.todo-form {
+  margin: 40px 0px;
+}
+
+/* input */
+
+.todo-input {
+  width: 250px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+/* Butão adicionar */
+
+.add-button {
+  background-color: #0000ff;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 1.2rem;
+}
+
+/* Alert de mensagem ao usuário. */
+
+.alert {
+  background-color: rgb(183, 4, 61);
+  color: #ffffff;
+  text-align: center;
+  width: 15rem;
+  margin-left: 0.3rem;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Fim do todo-form CSS */
+
+/* todo-items */
+
+.todo-tasks {
+  display: flex;
+  flex-direction: column;
+  min-width: 70%;
+  margin: 0px 0px 2rem;
+  padding: 0px;
+  gap: 1rem;
+  list-style: none;
+}
+
+/* each li with class="item" */
+
+.task {
+  font-size: 1.1rem;
+  position: relative;
+  /* z-index: 1; */
+  display: inline;
+  align-items: center;
+  background-color: #ffffff;
+  min-width: 80%;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+}
+
+.task:first-child {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.task:last-child {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+/* item style end */
+
+.checkbox {
+  margin-right: 10px;
+}
+
+/* CSS botão delete*/
+
+.delete-button {
+  float: right;
+  background-color: transparent;
+  appearance: none;
+  color: rgb(183, 4, 61);
+  box-shadow: rgb(183, 4, 61) 0px 0px 0px 2px;
+  margin: 0px;
+  padding: 0.1rem 0.4rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  border-radius: 0.3rem;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: rgb(183, 4, 61);
+}
+
+/* CSS do flag checked */
+
+.checked {
+  color: green;
+  background-color: rgb(139, 247, 148);
+  text-decoration: line-through;
+}
+
+/*Fim css todo-items */
+
+/* Fim css container*/
