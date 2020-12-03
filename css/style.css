@@ -40,6 +40,7 @@ ul {
 h1 {
   color: #ffffff;
   font-size: 3rem;
+  font-family: cursive;
 }
 
 /* Form das atividades todo-form(tasks) */
@@ -113,13 +114,13 @@ h1 {
 }
 
 .task:first-child {
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .task:last-child {
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 /* item style end */

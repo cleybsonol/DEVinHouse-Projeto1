@@ -145,8 +145,14 @@ todoTasksList.addEventListener('click', function (event) {
             cancelButtonText: 'Cancelar'
         }).then((result) => {if (result.value) {
             deleteTodo(event.target.parentElement.getAttribute('data-key'));  
-            //Retirei o mensagem de remoção com sucesso para economizar click do usuário
-            /*swal.fire('Ação executada','O item foi removido da lista!','success'); */
+            //adicionei alerta de sucesso sem interação
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Item removido da lista!',
+                showConfirmButton: false,
+                timer: 1200
+              })
             }
         })
 
