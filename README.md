@@ -2,6 +2,11 @@
 
 Projeto Inicial a ser entregue na 3º semana do curso DEVinHouse.
 
+
+
+
+Descrição do teste:
+
 Você está participando de um processo seletivo para ingressar numa vaga de programador em uma grande empresa de TI. Uma das etapas do processo envolve a criação de uma aplicação web de lista de afazeres (“to-do list”).
 
 Os requisitos que a aplicação deve ter, são:
