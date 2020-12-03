@@ -19,7 +19,7 @@ todoForm.addEventListener('submit', function (event) {
     event.preventDefault();
     if (checkExist(todos)) {
         Swal.fire("Valor já existente");
-        link.innerHTML = "Atividade já existe na lista!";
+        link.innerHTML = "Atividade já existe na lista";
     }
     else if (todoInput.value == '') {
         link.innerHTML = "Informe uma atividade valida!"
@@ -140,7 +140,7 @@ todoTasksList.addEventListener('click', function (event) {
             text: 'Ao confirmar o item será removido da lista!',
             showCancelButton: true,
             confirmButtonColor: '#d33',
-            //removi a colocação do botão cancelar, tornando o alerta sobre a confirmação/* cancelButtonColor: '#d33', */
+            //removi a coloração do botão cancelar, tornando o alerta sobre a confirmação/* cancelButtonColor: '#d33', */
             confirmButtonText: 'Sim, tenho certeza!',
             cancelButtonText: 'Cancelar'
         }).then((result) => {if (result.value) {
@@ -151,7 +151,8 @@ todoTasksList.addEventListener('click', function (event) {
                 icon: 'success',
                 title: 'Item removido da lista!',
                 showConfirmButton: false,
-                timer: 1200
+                width: 300,
+                timer: 1000
               })
             }
         })
