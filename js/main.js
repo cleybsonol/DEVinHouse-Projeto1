@@ -65,7 +65,7 @@ function addTodo(task) {
             completed: false
         };
         // adiciona o objeto no array dos TODOs
-        todos.push(todo);
+        todos.unshift(todo);
         addToLocalStorage(todos); // chamar a função para guardar no localstorage
         todoInput.value = ''; //Limpar o valor do input//
     }
@@ -102,6 +102,7 @@ function loadTodos(todos) {
       <input type="checkbox" class="checkbox" ${flagged}>${task.name}<button class="delete-button">Remover</button>`;        
         // adiciona o <li> ao <ul> (append)
         todoTasksList.append(li);
+        
     });
 
 }
