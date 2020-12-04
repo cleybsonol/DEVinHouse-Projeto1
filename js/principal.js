@@ -7,8 +7,7 @@ const todoInput = document.querySelector('.todo-input');
 const todoTasksList = document.querySelector('.todo-tasks');
 // Selecionar o elemento para notificar o erro de input <p>
 const link = document.querySelector('.alert');
-// SweetAlert
-/* const Swal = require('sweetalert2'); */
+
 
 // Array para armazenar os TO-DOs
 var todos = [];
