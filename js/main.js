@@ -99,7 +99,7 @@ function loadTodos(todos) {
         }
         // colocar no <li> item com Checkbox Flagged ou não + nome da task + o botão remover
         li.innerHTML = `
-      <input type="checkbox" class="checkbox" ${flagged}>${task.name}<button class="delete-button">Remover</button>`;
+      <input type="checkbox" class="checkbox" ${flagged}>${task.name}<button class="delete-button">Remover</button>`;        
         // adiciona o <li> ao <ul> (append)
         todoTasksList.append(li);
     });
@@ -114,6 +114,7 @@ function flagging(id) {
         }
     });
     addToLocalStorage(todos);
+    /* loadTodos(todos); */
 }
 
 // deleta o Todo (tarefa/task) para o ARRAY, para atualizar o localstorage e renderizar a atualização na tela
