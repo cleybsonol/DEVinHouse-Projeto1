@@ -16,16 +16,19 @@ var todos = [];
 todoForm.addEventListener('submit', function (event) {
     // Previnir o reload da pagina
     event.preventDefault();
+    //checa se a tarefa já existe na lista
     if (checkExist(todos)) {
         Swal.fire("Tarefa já inserida na lista");
         link.innerHTML = "Tarefa já existe na lista";
     }
+    //checa se o input está vazio
     else if (todoInput.value == '') {
         link.innerHTML = "Informe uma Tarefa valida"
     }
     else {
+        //chama a função addTodo(adicionar) com o input que está no form
         link.innerHTML = ""
-        addTodo(todoInput.value); // chama a função addTodo(adicionar) com o input que está no form
+        addTodo(todoInput.value);
     }
 });
 
@@ -76,8 +79,7 @@ function loadTodos(todos) {
         // Checa se a task está completa
         const flagged = task.completed ? 'checked' : null;
 
-        // cria um elemento <li> e o popula
-        // <li> </li>
+        // cria um elemento <li> e o popula <li> </li>
         const li = document.createElement('li');
         // <li class="task"> </li>
         li.setAttribute('class', 'task');
@@ -101,7 +103,7 @@ function loadTodos(todos) {
 
 }
 
-// Sinalizar completo ou não completo
+// Sinalizar(Flag) completo ou não completo
 function flagging(id) {
     todos.forEach(function (task) {
         if (task.id == id) {
@@ -130,32 +132,34 @@ todoTasksList.addEventListener('click', function (event) {
 
     // verifica se o evento botão Delete.
     if (event.target.classList.contains('delete-button')) {
-       // If Confirm utilizando o ALERTA normal, desabilitado para utilizaro sweetalert
+        // If Confirm utilizando o ALERTA normal, desabilitado para utilizaro sweetalert
         /*  if (confirm('Deseja realmente excluir?') == true) {
-            deleteTodo(event.target.parentElement.getAttribute('data-key')); */
-         swal.fire({
+        deleteTodo(event.target.parentElement.getAttribute('data-key')); */
+        swal.fire({
             icon: 'warning',
             title: 'Você está certo disso?',
             text: 'Ao confirmar o item será removido da lista!',
             showCancelButton: true,
             confirmButtonColor: '#d33',
-            //removi a coloração do botão cancelar, tornando o alerta sobre a confirmação/* cancelButtonColor: '#d33', */
+            //removi a coloração do botão cancelar, tornando o alerta sobre a confirmação
+            /* cancelButtonColor: '#d33', */
             confirmButtonText: 'Sim, tenho certeza!',
             cancelButtonText: 'Cancelar'
-        }).then((result) => {if (result.value) {
-            deleteTodo(event.target.parentElement.getAttribute('data-key'));  
-            //adicionei alerta de sucesso sem interação
-            Swal.fire({
-                position: 'center', 
-                icon: 'success',
-                title: 'Item removido da lista!',
-                showConfirmButton: false,
-                width: 300,
-                timer: 1000
-              })
+        }).then((result) => {
+            if (result.value) {
+                deleteTodo(event.target.parentElement.getAttribute('data-key'));
+                //adicionei alerta de sucesso sem interação
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Item removido da lista!',
+                    showConfirmButton: false,
+                    width: 300,
+                    timer: 1000
+                })
             }
         })
 
-      }
     }
+}
 );
