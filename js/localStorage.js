@@ -21,7 +21,8 @@ function addToLocalStorage(todos) {
     }
   }
 
-// Função para limpar os TO-DOs no localstorage
+  // Observação a função não doi colocada em USO
+  // Função para limpar os TO-DOs no localstorage  
 function clearLocalStorage(todos) {
   // limparo localstorage
   localStorage.clear();
