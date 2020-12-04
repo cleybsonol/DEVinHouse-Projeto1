@@ -5,6 +5,8 @@ const todoForm = document.querySelector('.todo-form');
 const todoInput = document.querySelector('.todo-input');
 // Selecionar o <ul> com a class="todo-tasks"
 const todoTasksList = document.querySelector('.todo-tasks');
+//
+const filterOption = document.querySelector('.filter_todo');
 // Selecionar o elemento para notificar o erro de input <p>
 const link = document.querySelector('.alert');
 
@@ -88,7 +90,7 @@ function loadTodos(todos) {
         /* Exemplo: <li class="task" data-key="%dataatual%"> 
               <input type="checkbox" class="checkbox">
               tarefa a criar
-              <button class="delete-button">X</button>
+              <button class="delete-button">Remover</button>
             </li> */
         /* Se as tarefas estão completas, então adiciona a classe ao <li>
          chamada 'flagged' e adiciona o CSS determinado.*/
@@ -164,3 +166,4 @@ todoTasksList.addEventListener('click', function (event) {
     }
 }
 );
+
