@@ -5,8 +5,6 @@ const todoForm = document.querySelector('.todo-form');
 const todoInput = document.querySelector('.todo-input');
 // Selecionar o <ul> com a class="todo-tasks"
 const todoTasksList = document.querySelector('.todo-tasks');
-//
-const filterOption = document.querySelector('.filter_todo');
 // Selecionar o elemento para notificar o erro de input <p>
 const link = document.querySelector('.alert');
 
