@@ -28,7 +28,7 @@ ul {
 /* container onde ficará o conteúdo principal do site */
 
 .container {
-  min-width: 700px;
+  min-width: 50vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
