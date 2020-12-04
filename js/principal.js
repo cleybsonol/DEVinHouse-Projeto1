@@ -18,11 +18,11 @@ todoForm.addEventListener('submit', function (event) {
     // Previnir o reload da pagina
     event.preventDefault();
     if (checkExist(todos)) {
-        Swal.fire("Valor já existente");
-        link.innerHTML = "Atividade já existe na lista";
+        Swal.fire("Tarefa já inserida na lista");
+        link.innerHTML = "Tarefa já existe na lista";
     }
     else if (todoInput.value == '') {
-        link.innerHTML = "Informe uma atividade valida!"
+        link.innerHTML = "Informe uma Tarefa valida"
     }
     else {
         link.innerHTML = ""
