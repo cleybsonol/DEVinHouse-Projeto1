@@ -73,9 +73,10 @@ function addTodo(task) {
 
 // Função para CARREGAR na tela os TO-DOs(carregando o array : todos) 
 function loadTodos(todos) {
-    // Limpa a <ul> das tasks com "class=todo-tasks"
+    //ordena o array jogando o itens completos para o fim da lista de atividades.
     todos.sort((a,b) => a.completed > b.completed ? 1 : b.completed > a.completed ? -1 : 0)
 
+    // Limpa a <ul> das tasks com "class=todo-tasks"
     todoTasksList.innerHTML = '';
 
     // Laço foreach para passar atráves de cada task dentro do array
