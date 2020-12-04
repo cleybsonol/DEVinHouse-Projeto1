@@ -147,7 +147,7 @@ todoTasksList.addEventListener('click', function (event) {
             deleteTodo(event.target.parentElement.getAttribute('data-key'));  
             //adicionei alerta de sucesso sem interação
             Swal.fire({
-                position: 'top-end',
+                position: 'center', 
                 icon: 'success',
                 title: 'Item removido da lista!',
                 showConfirmButton: false,
