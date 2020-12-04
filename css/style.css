@@ -104,9 +104,8 @@ h1 {
 .task {
   font-size: 1.1rem;
   position: relative;
-  /* z-index: 1; */
-  display: inline;
   align-items: center;
+  display: inline;
   background-color: #ffffff;
   min-width: 80%;
   padding: 0.6rem 1rem;
@@ -161,5 +160,4 @@ h1 {
 }
 
 /*Fim css todo-items */
-
 /* Fim css container*/
