@@ -139,7 +139,7 @@ todoTasksList.addEventListener('click', function (event) {
         swal.fire({
             icon: 'warning',
             title: 'Você está certo disso?',
-            text: 'Ao confirmar o item será removido da lista!',
+            text: 'Ao confirmar a tarefa será removido da lista!',
             showCancelButton: true,
             confirmButtonColor: '#d33',
             //removi a coloração do botão cancelar, tornando o alerta sobre a confirmação
@@ -153,7 +153,7 @@ todoTasksList.addEventListener('click', function (event) {
                 Swal.fire({
                     position: 'center',
                     icon: 'success',
-                    title: 'Item removido da lista!',
+                    title: 'Tarefa removida da lista!',
                     showConfirmButton: false,
                     width: 300,
                     timer: 1000
