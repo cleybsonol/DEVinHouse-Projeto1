@@ -69,9 +69,9 @@ function addTodo(task) {
     }
 }
 
-// Função para CARREGAR na tela os TO-Dos
+// Função para CARREGAR na tela os TO-DOs(carregando o array : todos) 
 function loadTodos(todos) {
-    // Limpa a <ul> das tasks com class=todo-tasks
+    // Limpa a <ul> das tasks com "class=todo-tasks"
     todoTasksList.innerHTML = '';
 
     // Laço foreach para passar atráves de cada task dentro do array
@@ -90,14 +90,15 @@ function loadTodos(todos) {
               tarefa a criar
               <button class="delete-button">X</button>
             </li> */
-        // Se as tarefas estão completas, então adiciona a classe ao <li> chamada 'flagged' e adiciona o CSS determinado.
+        /* Se as tarefas estão completas, então adiciona a classe ao <li>
+         chamada 'flagged' e adiciona o CSS determinado.*/
         if (task.completed === true) {
             li.classList.add('checked');
         }
+        // colocar no <li> item com Checkbox Flagged ou não + nome da task + o botão remover
         li.innerHTML = `
-      <input type="checkbox" class="checkbox" ${flagged}>${task.name}<button class="delete-button">Remover</button>
-    `;
-        // adiciona o <li> ao <ul>
+      <input type="checkbox" class="checkbox" ${flagged}>${task.name}<button class="delete-button">Remover</button>`;
+        // adiciona o <li> ao <ul> (append)
         todoTasksList.append(li);
     });
 
