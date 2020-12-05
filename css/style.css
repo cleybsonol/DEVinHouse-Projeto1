@@ -38,9 +38,12 @@ ul {
 }
 
 h1 {
-  color: #ffffff;
-  font-size: 3rem;
-  font-family: cursive;
+  font-size: 70pt;
+  font-family: 'Luckiest Guy';
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgba(0, 0, 0, .1), 0 0 6px rgba(0, 0, 0, .1), 0 6px 3px rgba(0, 0, 0, .3), 0 12px 6px rgba(0, 0, 0, .2), 0 18px 18px rgba(0, 0, 0, .25), 0 24px 24px rgba(0, 0, 0, .2), 0 36px 36px rgba(0, 0, 0, .15);
 }
 
 /* Form das atividades todo-form(tasks) */
@@ -164,6 +167,7 @@ h1 {
 /*Fim css todo-items */
 
 /*Inicio css stats */
+
 .todo-stats {
   /* Em telas menores exibir empilhado */
   position: relative;
@@ -181,29 +185,33 @@ h1 {
   border-radius: 0.3rem;
 }
 
-.todo-stats > div {
+.todo-stats>div {
   position: relative;
   z-index: 1;
 }
 
 /* Em telas maiores exibir em 3 colunas*/
-@media screen and (min-width: 600px) {  
+
+@media screen and (min-width: 600px) {
   .todo-stats {
     display: grid;
     grid-template-columns: repeat(3, 10.5rem);
   }
 }
 
-.remaining-tasks{
+.remaining-tasks {
   color: #610310;
+  text-shadow: #2b1833;
 }
-.completed-tasks{
+
+.completed-tasks {
   color: #1a5c0a;
 }
-.total-tasks{
+
+.total-tasks {
   color: #051885;
 }
-/* Fim css stats */
-/* Fim css container*/
 
- 
+/* Fim css stats */
+
+/* Fim css container*/
