@@ -21,14 +21,26 @@
 
         <form class="todo-form">
             <input type="text" class="todo-input" maxlength="100" placeholder="Insira uma Tarefa na lista...">
-            <button type="submit" class="add-button">Adicionar</button>      
+            <button type="submit" class="add-button">Adicionar</button>
             <p class="alert"></p>
         </form>
-
-        <ul class="todo-tasks">
-
-        </ul>
+        <form>
+            <div class="todo-stats">
+                <div class="total-tasks">
+                    Total de Tarefas: <span>0</span>
+                </div>
+                <div class="completed-tasks">
+                    Tarefas Completas: <span>0</span>
+                </div>
+                <div class="remaining-tasks">
+                    Tarefas Restantes: <span>0</span>
+                </div>
+            </div>
+        </form>
+        </br>
+        <ul class="todo-tasks"></ul>
     </div>
+
     <footer>
         <div class="containerFooter">
             <div class="row">

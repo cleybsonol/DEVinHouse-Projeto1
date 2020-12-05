@@ -7,6 +7,10 @@ const todoInput = document.querySelector('.todo-input');
 const todoTasksList = document.querySelector('.todo-tasks');
 // Selecionar o elemento para notificar o erro de input <p>
 const link = document.querySelector('.alert');
+// Elementos to totalizador
+const totalTasks = document.querySelector(".total-tasks span");
+const completedTasks = document.querySelector(".completed-tasks span");
+const remainingTasks = document.querySelector(".remaining-tasks span");
 
 
 // Array para armazenar os TO-DOs
@@ -98,7 +102,7 @@ function loadTodos(todos) {
         if (task.completed === true) {
             li.classList.add('checked');
         }
-
+        countTasks(todos)
         // colocar no <li> item com Checkbox Flagged ou não + nome da task + o botão remover
         li.innerHTML = `
       <input type="checkbox" class="checkbox" ${flagged}>${task.name}<button class="delete-button">Remover</button>`;        
@@ -128,6 +132,17 @@ function deleteTodo(id) {
     // Atualizar o localStorage
     addToLocalStorage(todos);
 }
+
+//Função para contabilizar as tasks
+function countTasks(todos) {
+    //adiciona o valor total
+    totalTasks.textContent = todos.length;
+    //adiciona o valor complete / checando as tasks completas
+    const completedTasksArray = todos.filter((task) => task.completed === true);
+    completedTasks.textContent = completedTasksArray.length;
+    //adiciona das tasks que faltam
+    remainingTasks.textContent = todos.length - completedTasksArray.length;
+  };
 
 // Escutar os eventos de click no checkbox e delete.
 todoTasksList.addEventListener('click', function (event) {
