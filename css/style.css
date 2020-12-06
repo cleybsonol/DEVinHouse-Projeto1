@@ -9,7 +9,9 @@
 body {
   display: flex;
   justify-content: center;
-  background: linear-gradient(#4c0b68, #8a2a25, #2b1833);
+  background-image: url("../cool-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: sans-serif;
 }
 
