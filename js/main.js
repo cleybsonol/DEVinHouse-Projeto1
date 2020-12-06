@@ -23,11 +23,12 @@ todoForm.addEventListener('submit', function (event) {
     //checa se a tarefa já existe na lista
     if (checkExist(todos)) {
         Swal.fire("Tarefa já inserida na lista");
-        link.innerHTML = "Tarefa já existe na lista";
+        link.innerHTML = "Tarefa já inserida na lista";
     }
     //checa se o input está vazio
     else if (todoInput.value == '') {
-        link.innerHTML = "Informe uma Tarefa valida"
+        Swal.fire("Informe uma Tarefa válida");
+        link.innerHTML = "Informe uma Tarefa válida"
     }
     else {
         //chama a função addTodo(adicionar) com o input que está no form
