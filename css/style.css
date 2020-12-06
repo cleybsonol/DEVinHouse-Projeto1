@@ -16,7 +16,7 @@ body {
 
 button:hover {
   cursor: pointer;
-  background-color: #73E831;
+  background-color: #0000ff;
 }
 
 ul {
@@ -89,7 +89,7 @@ h1 {
 /* Butão adicionar */
 
 .add-button {
-  background-color: #0000ff;
+  background-color: #5e61f1;
   color: #ffffff;
   border: none;
   outline: none;
@@ -101,7 +101,7 @@ h1 {
 /* Alert de mensagem ao usuário. */
 
 .alert {
-  background-color: rgb(183, 4, 61);
+  background-color: rgb(180, 30, 77);
   color: #ffffff;
   text-align: center;
   width: 15rem;
