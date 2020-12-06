@@ -43,7 +43,28 @@ h1 {
   color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgba(0, 0, 0, .1), 0 0 6px rgba(0, 0, 0, .1), 0 6px 3px rgba(0, 0, 0, .3), 0 12px 6px rgba(0, 0, 0, .2), 0 18px 18px rgba(0, 0, 0, .25), 0 24px 24px rgba(0, 0, 0, .2), 0 36px 36px rgba(0, 0, 0, .15);
+  text-shadow:   0px -6px 0 #212121,  
+                 0px -6px 0 #212121,
+                 0px  6px 0 #212121,
+                 0px  6px 0 #212121,
+                -6px  0px 0 #212121,  
+                 6px  0px 0 #212121,
+                -6px  0px 0 #212121,
+                 6px  0px 0 #212121,
+                -6px -6px 0 #212121,  
+                 6px -6px 0 #212121,
+                -6px  6px 0 #212121,
+                 6px  6px 0 #212121,
+                -6px  18px 0 #212121,
+                 0px  18px 0 #212121,
+                 6px  18px 0 #212121,
+                 0 19px 1px rgba(0,0,0,.1),
+                 0 0 6px rgba(0,0,0,.1),
+                 0 6px 3px rgba(0,0,0,.3),
+                 0 12px 6px rgba(0,0,0,.2),
+                 0 18px 18px rgba(0,0,0,.25),
+                 0 24px 24px rgba(0,0,0,.2),
+                 0 36px 36px rgba(0,0,0,.15);
 }
 
 /* Form das atividades todo-form(tasks) */
@@ -105,6 +126,7 @@ h1 {
 /* each li with class="item" */
 
 .task {
+  font-family: sans-serif;
   font-size: 1.1rem;
   position: relative;
   align-items: center;
@@ -167,7 +189,6 @@ h1 {
 /*Fim css todo-items */
 
 /*Inicio css stats */
-
 .todo-stats {
   /* Em telas menores exibir empilhado */
   position: relative;
@@ -175,7 +196,7 @@ h1 {
   padding: 5px 5px;
   color: white;
   font-size: 1rem;
-  background: linear-gradient(#7b767e, #f0e8e7, #444250);
+  background: linear-gradient(#c6beca, #f0e8e7, #918ab9);
   align-items: center;
   border-bottom: 10%;
   border-width: 1px;
@@ -185,33 +206,32 @@ h1 {
   border-radius: 0.3rem;
 }
 
-.todo-stats>div {
+.todo-stats > div {
   position: relative;
   z-index: 1;
 }
 
 /* Em telas maiores exibir em 3 colunas*/
-
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {  
   .todo-stats {
     display: grid;
     grid-template-columns: repeat(3, 10.5rem);
   }
 }
 
-.remaining-tasks {
-  color: #610310;
-  text-shadow: #2b1833;
+.remaining-tasks{
+  color: #94081d;
+  font-weight: bold;
 }
-
-.completed-tasks {
-  color: #1a5c0a;
+.completed-tasks{
+  color: #1f6e0b;
+  font-weight: bold;
 }
-
-.total-tasks {
+.total-tasks{
+  font-weight: bold;
   color: #051885;
 }
-
 /* Fim css stats */
-
 /* Fim css container*/
+
+ 
